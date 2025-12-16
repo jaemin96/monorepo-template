@@ -85,8 +85,8 @@ const packagesDir = path.resolve("packages");
 
 const apps = fs.existsSync(appsDir)
   ? fs
-      .readdirSync(appsDir)
-      .filter((f) => fs.statSync(path.join(appsDir, f)).isDirectory())
+    .readdirSync(appsDir)
+    .filter((f) => fs.statSync(path.join(appsDir, f)).isDirectory())
   : [];
 
 const packages = fs.existsSync(packagesDir) ? getAllPackages(packagesDir) : [];
@@ -103,12 +103,13 @@ let rootNodes = "";
 let packageNodes = "";
 let appNodes = "";
 
+// @repo는 workspace 명명에 따라 수동으로 바꿔줘야함... ㅎ , 문자열 분기 처리까지 넣으면 너무 오버엔지니어링 같음
 for (const n of nodeSet) {
   if (n === "true" || n === "root") continue;
 
   if (n.endsWith("___ROOT___")) {
     rootNodes += `"${n}" [fillcolor="#007acc", fontcolor="white", style="filled,rounded", penwidth=3];\n`;
-  } else if (n.startsWith("[root] @wc/")) {
+  } else if (n.startsWith("[root] @repo/")) {
     packageNodes += `"${n}" [fillcolor="#33383e", fontcolor="white", style="filled,rounded", penwidth=1.5];\n`;
   } else if (apps.some((a) => n.startsWith(`[root] ${a}#build`))) {
     appNodes += `"${n}" [fillcolor="#004e8c", fontcolor="white", style="filled,rounded", penwidth=2];\n`;
