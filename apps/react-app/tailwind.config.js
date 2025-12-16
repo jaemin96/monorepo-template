@@ -1,10 +1,9 @@
-// import preset from "../../packages/design/tailwind.preset";
+import base from "../../tailwind.config";
 
 const config = {
-  presets: [preset],
+  presets: [base],
   content: [
     "./src/**/*.{ts,tsx}",
-    // , "../../packages/design/src/**/*.{ts,tsx}"
   ],
 };
 

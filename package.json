@@ -12,6 +12,10 @@
     "graph:merge": "node dot/scripts/merge-graph.js",
     "graph": "pnpm run graph:turbo && pnpm run graph:merge"
   },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
   "devDependencies": {
     "turbo": "latest",
     "typescript": "^5.6.2",
