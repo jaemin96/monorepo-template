@@ -1,2 +1,2 @@
-import config from "@wc/prettier-config";
+import config from "@repo/prettier-config";
 export default config;

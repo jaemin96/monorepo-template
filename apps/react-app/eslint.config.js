@@ -1,3 +1,3 @@
-import base from "@wc/eslint-config";
+import base from "@repo/eslint-config";
 
 export default [...base];
