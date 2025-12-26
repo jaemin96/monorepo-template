@@ -1,3 +1,3 @@
-import base from "@repo/eslint-config";
+import base from "@jaemdev/eslint-config";
 
 export default [...base];

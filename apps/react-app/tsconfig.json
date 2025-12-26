@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/tsconfig/react",
+  "extends": "@jaemdev/tsconfig/react",
   "include": ["src"],
   "compilerOptions": {
     "baseUrl": "./",
